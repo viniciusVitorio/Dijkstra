@@ -7,7 +7,6 @@ export const airports = {
   BSB: { id: 'BSB', name: 'Aeroporto Internacional de Brasília', position: [-15.8697, -47.9208] },
   SSA: { id: 'SSA', name: 'Aeroporto Internacional de Salvador', position: [-12.9714, -38.5014] },
   FOR: { id: 'FOR', name: 'Aeroporto Internacional de Fortaleza', position: [-3.7760, -38.5323] },
-  // ... outros aeroportos
 };
 
 export const routes = [
@@ -17,5 +16,4 @@ export const routes = [
   { from: 'BSB', to: 'SSA', distance: 1060 },
   { from: 'SSA', to: 'FOR', distance: 1389 },
   { from: 'GIG', to: 'CNF', distance: 339 },
-  // ... outras rotas
 ];
