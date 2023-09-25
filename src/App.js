@@ -14,6 +14,8 @@ const App = () => {
         const result = dijkstra(airports, routes, startAirport, endAirport);
         const coordinates = result.path.map(airportId => airports[airportId].position);
         setPath(coordinates);
+
+        
     };
 
     return (
@@ -37,6 +39,8 @@ const App = () => {
             <button onClick={calculateRoute}>Calcular Rota</button>
             <BrazilMap path={path} />
         </div>
+
+        
     );
 };
 

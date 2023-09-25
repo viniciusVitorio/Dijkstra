@@ -1,5 +1,3 @@
-// src/data.js
-
 export const airports = {
   GRU: { id: 'GRU', name: 'Aeroporto Internacional de São Paulo/Guarulhos', position: [-23.4306, -46.4731] },
   GIG: { id: 'GIG', name: 'Aeroporto Internacional do Rio de Janeiro/Galeão', position: [-22.8089, -43.2436] },

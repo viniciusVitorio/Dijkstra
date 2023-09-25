@@ -48,7 +48,7 @@ export const dijkstra = (airports, routes, start, end) => {
   };
 };
 
-const buildGraph = (routes) => {
+export const buildGraph = (routes) => { 
   const graph = {};
   routes.forEach(route => {
     const { from, to, distance } = route;
@@ -57,3 +57,27 @@ const buildGraph = (routes) => {
   });
   return graph;
 };
+
+export const findAllPaths = (graph, start, end, visited = {}, path = []) => {
+  visited[start] = true;
+  path.push(start);
+
+  let paths = [];
+
+  if (start === end) {
+      paths.push([...path]);  // Adiciona o caminho atual à lista de caminhos
+  } else {
+      for (const neighbor in graph[start] || {}) {
+          if (!visited[neighbor]) {
+              const newPaths = findAllPaths(graph, neighbor, end, { ...visited }, [...path]);
+              paths = paths.concat(newPaths);
+          }
+      }
+  }
+
+  path.pop();
+  visited[start] = false;
+  return paths;
+};
+
+
