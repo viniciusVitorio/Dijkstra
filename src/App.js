@@ -37,7 +37,7 @@ const App = () => {
                 </select>
             </label>
             <button onClick={calculateRoute}>Calcular Rota</button>
-            <BrazilMap path={path} />
+            <BrazilMap path={path} points={airports} />
         </div>
 
         
